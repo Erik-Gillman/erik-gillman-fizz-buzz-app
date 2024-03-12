@@ -35,15 +35,15 @@ public class FizzBuzzController {
     }
     )
     @GetMapping("/{value}")
-    public ResponseEntity<String> getFizzBuzz(@PathVariable("value") String value){
-        int convertValue;
+    public ResponseEntity<String> getFizzBuzz(@PathVariable("value") Integer value){
+        /*int convertValue;
         try{
             convertValue = Integer.parseInt(value);
         }
         catch(Exception e){
             return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
-        }
-        return new ResponseEntity<>(fizzBuzzService.fizzBuzz(convertValue), HttpStatus.OK);
+        }*/
+        return new ResponseEntity<>(fizzBuzzService.fizzBuzz(value), HttpStatus.OK);
     }
 
 }
