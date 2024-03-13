@@ -12,7 +12,7 @@ public class FizzBuzzService {
     public String fizzBuzz(Integer value){
         Results result = this.findResultsByValue(value);
         if(result != null){
-            return result.getFizzBuzz();
+            return result.getValueResult();
         }
         if(value % 3 == 0){
             if(value % 5 == 0){

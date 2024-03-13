@@ -8,11 +8,11 @@ public class Results {
     @Id
     private Integer value;
 
-    private String fizzBuzz;
+    private String valueResult;
 
-    Results(Integer value, String fizzBuzz){
+    Results(Integer value, String valueResult){
         this.value = value;
-        this.fizzBuzz = fizzBuzz;
+        this.valueResult = valueResult;
     }
 
     public Results() {
@@ -23,7 +23,7 @@ public class Results {
         return value;
     }
 
-    public String getFizzBuzz() {
-        return fizzBuzz;
+    public String getValueResult() {
+        return valueResult;
     }
 }

@@ -17,6 +17,8 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "ES2022",
+    "types": ["jest"],
+    "typeRoots": ["./types", "./node_modules/@types"],
     "module": "ES2022",
     "useDefineForClassFields": false,
     "lib": [
@@ -24,6 +26,8 @@
       "dom"
     ]
   },
+  "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts"],
+  "include": ["./src/**/*.tsx", "./src/**/*.ts"],
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
