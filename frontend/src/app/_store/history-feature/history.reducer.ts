@@ -4,7 +4,7 @@ import {createReducer, on} from "@ngrx/store";
 
 
 
-const initState: HistoryState = {
+export const initState: HistoryState = {
   history: []
 }
 
@@ -12,7 +12,14 @@ export const HistoryReducer = createReducer(
   initState,
   on(HistoryActions.historyAdd, (state, props) => {
     return {
-      ...state
+      ...state,
+      history: [...state.history, props.history]
     }
-  })
+  }),
+  on(HistoryActions.historyDelete, (state, props) => {
+  return {
+    ...state,
+    history: [...state.history.slice(0, props.index), ...state.history.slice(props.index + 1)]
+  }
+})
 )

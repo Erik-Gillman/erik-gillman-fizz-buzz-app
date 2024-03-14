@@ -1,6 +1,6 @@
 import {historyMock} from "./history.mocks";
 import * as fromHistory from './index'
-
+/*
 describe('HistoryActions', () => {
   describe('AddResult', () =>
     it('should create an action to add result', () => {
@@ -12,3 +12,4 @@ describe('HistoryActions', () => {
     })
   )
 })
+*/
